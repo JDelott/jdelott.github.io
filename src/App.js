@@ -10,8 +10,8 @@ function App() {
   const speechSupported = isSpeechSynthesisSupported();
 
   return (
-    <div className="h-screen flex flex-col justify-center items-center pt-20">
-      <header className="text-4xl font-bold mb-8 text-gray-800">Shadow Wrestler</header>
+    <div className="h-screen flex flex-col items-center justify-center">
+      <h1 className="text-6xl font-bold mb-8 text-white">Shadow Wrestler</h1>
       <div className="container mx-auto">
         <div className="center">
           <Timer />

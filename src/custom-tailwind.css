@@ -1,11 +1,13 @@
 /* custom-tailwind.css */
 
-.header {
-  @apply text-4xl font-bold mb-8 text-white text-center; /* Change text color to white */
-}
+
 
 body {
-  @apply bg-gray-800;
+background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 1),    /* Black */
+    rgba(1, 94, 1, 0.757)   /* Green */
+  );
 }
 
 /* custom-tailwind.css */
@@ -75,4 +77,39 @@ body {
 
 .moves-button[disabled] {
   @apply opacity-50 cursor-not-allowed;
+}
+
+
+
+/* custom-tailwind.css */
+.custom-button {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.custom-button:hover {
+  background-color: #333; /* Darken the background color on hover */
+}
+
+/* Red button style */
+.red-button {
+  background-color: #f44336; /* Red color */
+}
+
+.red-button:hover {
+  background-color: #d32f2f; /* Darken the red color on hover */
+}
+
+/* Green button style */
+.green-button {
+  background-color: #317b34; /* Green color */
+}
+
+.green-button:hover {
+  background-color: #388e3c; /* Darken the green color on hover */
 }
