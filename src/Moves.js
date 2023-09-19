@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './custom-tailwind.css'; // Import your custom CSS file
 
 const moves = ['shoot', 'sprawl', 'block'];
 
@@ -33,9 +34,15 @@ function Moves() {
   }, [speed, isMuted]);
 
   return (
-    <div>
-      <p>Current Move: {currentMove}</p>
-      <button onClick={() => setIsMuted(!isMuted)}>
+    <div className="moves-container">
+      <h2 className="moves-heading">Current Move:</h2>
+      <p className="moves-text">{currentMove}</p>
+      <button
+        onClick={() => setIsMuted(!isMuted)}
+        className={`moves-button ${
+          isMuted ? 'moves-mute-button moves-mute-bg' : 'moves-mute-button moves-unmute-bg'
+        }`}
+      >
         {isMuted ? 'Unmute' : 'Mute'}
       </button>
     </div>
