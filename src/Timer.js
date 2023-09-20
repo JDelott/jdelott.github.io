@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './styles.css';
 import './custom-tailwind.css';
+import buzzerSound from './audio/mixkit-ice-hockey-sports-buzzer-941.wav';
 
 function Timer() {
   // State variables
@@ -18,6 +19,20 @@ function Timer() {
   const stopTimer = () => {
     setIsRunning(false);
     setRemainingSeconds(totalSeconds);
+    stopBuzzer(); // Stop the buzzer sound
+  };
+
+  // Function to play the buzzer sound
+  const playBuzzer = () => {
+    const audio = new Audio(buzzerSound);
+    audio.play();
+  };
+
+  // Function to stop the buzzer sound
+  const stopBuzzer = () => {
+    const audio = new Audio(buzzerSound);
+    audio.pause();
+    audio.currentTime = 0;
   };
 
   // Use the useEffect hook to update the timer
@@ -30,7 +45,7 @@ function Timer() {
       }, 1000);
     } else if (remainingSeconds === 0) {
       setIsRunning(false);
-      // Handle timer completion (e.g., play a sound)
+      playBuzzer(); // Play the buzzer sound when the timer completes
     }
 
     return () => clearInterval(interval);
@@ -63,17 +78,17 @@ function Timer() {
       </div>
       <div className="mt-4">
         <label className="timer-label">
-     
-        <h2 className="timer-heading font-bold set-timer-duration-text">Set Time:</h2>
-        <input
+          <h2 className="timer-heading font-bold set-timer-duration-text">Set Time:</h2>
+          <input
             type="number"
+            min="1" // Minimum value allowed (1 minute)
+            step="1" // Step size for incrementing/decrementing (1 minute)
             value={totalSeconds / 60}
             onChange={(e) => setTotalSeconds(parseInt(e.target.value) * 60)}
             className="mt-2 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-500 w-20 input"
             placeholder="min"
           />
         </label>
-        {/* <div><span className="text-gray-500 ml-1 minutes-indicator">Minutes</span> </div> */}
       </div>
     </div>
   );
