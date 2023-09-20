@@ -248,3 +248,10 @@ body {
 .custom-button:hover {
   background-color: #333; /* Darken the background color on hover */
 }
+
+.timer-text-lg {
+  font-size: 4rem; /* Adjust the font size as needed */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-shadow: 0 1px 1px rgba(81, 79, 79, 0.5);
+}
