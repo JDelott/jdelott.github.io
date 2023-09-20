@@ -42,7 +42,6 @@ function Timer() {
 
   return (
     <div className="timer-container">
-      <h2 className="timer-heading">Countdown Timer</h2>
       <p className="timer-text">
         Remaining Time: {minutes < 10 ? '0' : ''}{minutes}:{seconds < 10 ? '0' : ''}{seconds} minutes
       </p>
@@ -64,12 +63,12 @@ function Timer() {
       </div>
       <div className="mt-4">
         <label className="timer-label">
-          Set Timer Duration (minutes):
-          <input
+        <h2 className="timer-heading font-bold set-timer-duration-text">Set Timer Duration</h2>
+        <input
             type="number"
             value={totalSeconds / 60}
             onChange={(e) => setTotalSeconds(parseInt(e.target.value) * 60)}
-            className="mt-2 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-500 w-20"
+            className="mt-2 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-500 w-20 input"
           />
         </label>
       </div>

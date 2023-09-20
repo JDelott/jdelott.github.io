@@ -1,19 +1,38 @@
 /* custom-tailwind.css */
 
-
+/* custom-tailwind.css */
 
 body {
-background: linear-gradient(
+  background: linear-gradient(
     135deg,
     rgba(0, 0, 0, 1),    /* Black */
     rgba(1, 94, 1, 0.757)   /* Green */
   );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh; /* Ensure full viewport height */
 }
+
+/* Add your "Shadow Wrestler" text styles */
+.shadow-wrestler-text {
+  color: white;
+  font-size: 36px; /* Adjust font size as needed */
+  font-weight: bold;
+  margin-bottom: 20px; /* Add spacing below the text */
+}
+
 
 /* custom-tailwind.css */
 .container {
   @apply mx-auto p-4 max-w-md rounded-lg shadow-md;
-  background-color: white; /* Add a background color for the container (optional) */
+  background: linear-gradient(
+      135deg,
+      rgba(243, 6, 69, 0.931),    /* Red or Orange Shade */
+      rgba(215, 211, 211, 0.558)   /* Green */
+    );  
   position: absolute;
   top: 50%;
   left: 50%;
@@ -34,6 +53,7 @@ background: linear-gradient(
 
 .timer-button {
   @apply bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded;
+  margin-right: 10px; /* Add margin to the right to create space between buttons */
 }
 
 .timer-button[disabled] {
@@ -49,6 +69,7 @@ background: linear-gradient(
 /* custom-tailwind.css */
 .moves-container {
   @apply bg-blue-200 p-4 rounded-lg shadow-md text-center;
+  margin-top: 20px; /* Add top margin to create space between the containers */
 }
 
 .moves-heading {
@@ -120,4 +141,59 @@ background: linear-gradient(
   align-items: center; /* Center vertically */
   height: 100%; /* Ensure it takes the full height of its container */
   text-align: center; /* Center text within the container */
+  padding: 0.5rem 1rem;
+  padding-top: 0%;
+  padding-bottom: 3.5%;
+  font-weight: bold;
+  font-size: 36px;
+  
+}
+
+.set-timer-duration-text {
+  @apply text-2xl font-bold mb-4 pt-4;
+}
+
+
+/* Apply modern styles to the input arrows */
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0; /* Remove the default margin */
+}
+
+/* Style the input arrows */
+.input::after {
+  content: '\25B2'; /* Unicode character for an upward arrow */
+  position: absolute;
+  top: 8px; /* Adjust the vertical position */
+  right: 10px; /* Adjust the horizontal position */
+  font-size: 12px; /* Adjust the arrow size */
+  color: #0f0; /* Arrow color */
+  pointer-events: none; /* Prevent interaction with the arrow */
+}
+
+/* Style the input arrows for down direction */
+.input::-webkit-outer-spin-button::-webkit-down-button,
+.input::-webkit-inner-spin-button::-webkit-down-button {
+  display: none; /* Hide the default down arrow */
+}
+
+/* Apply styles to the input field itself */
+.input {
+  @apply text-2xl font-bold mb-4 pt-4 text-center;
+  /* Remove blinking cursor */
+  caret-color: transparent;
+  /* Style the input like a digital clock */
+  font-family: monospace; /* Use a monospace font for uniform character widths */
+  background-color: #f5f0f0; /* Black background */
+  color: rgb(20, 20, 20); /* Green text color */
+  border: 2px solid black; /* Add a black border */
+  padding: 0.2rem 0.5rem; /* Adjust padding for better appearance */
+  border-radius: 0.2rem; /* Add a slight border radius */
+  width: 4rem; /* Adjust the width as needed */
+  /* Ensure the arrows are visible on hover */
+  &:hover::after {
+    color: #00f; /* Change arrow color on hover */
+  }
 }

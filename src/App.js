@@ -24,7 +24,7 @@ function App() {
           ) : (
             <p>Speech synthesis is not supported in this browser.</p>
           )}
-        </div>
+          </div>
         </div>
       </div>
     </div>
