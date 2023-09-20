@@ -1,0 +1,257 @@
+/* custom-tailwind.css */
+
+/* custom-tailwind.css */
+
+body {
+  background: linear-gradient(
+    135deg,
+  rgba(128, 128, 128, 0.8), /* Gray */
+  rgba(255, 0, 0, 0.8) /* Red */
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh; /* Ensure full viewport height */
+}
+
+/* Add your "Shadow Wrestler" text styles */
+.shadow-wrestler-text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif; /* Replace with your chosen font family */
+  font-size: 40px; /* Adjust font size as needed */
+  font-weight: bold; /* Adjust font weight as needed */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust shadow values for effect */
+  letter-spacing: 2px; /* Adjust letter spacing as needed */
+  line-height: 1.2; /* Adjust line height as needed */
+  color: white; /* Adjust text color as needed */
+  white-space: nowrap; /* Keep the text on one line */
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* custom-tailwind.css */
+.container {
+  @apply mx-auto p-4 max-w-md rounded-lg shadow-md;
+  background: linear-gradient(
+      135deg,
+     rgba(0, 128, 255, 0.8), /* Light Blue */
+  rgba(128, 0, 128, 0.8) /* Purple */
+      
+    );  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.timer-container {
+  @apply bg-gray-200 p-4 rounded-lg shadow-md text-center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.timer-heading {
+  @apply text-xl font-semibold mb-2;
+}
+
+.timer-text {
+  @apply text-2xl font-bold mb-4;
+}
+
+.timer-button {
+  @apply bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded;
+  margin-right: 10px; /* Add margin to the right to create space between buttons */
+}
+
+.timer-button[disabled] {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.timer-label {
+  @apply block text-gray-700;
+}
+
+/* MOVES ****************************************************************************** */
+
+/* custom-tailwind.css */
+.moves-container {
+  @apply bg-blue-200 p-4 rounded-lg shadow-md text-center;
+  margin-top: 20px; /* Add top margin to create space between the containers */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.moves-heading {
+  font-weight: bold; /* Make the text bold */
+  @apply text-2xl mb-2;
+}
+
+.moves-text {
+  @apply text-3xl font-bold mb-4;
+  color: #f43636
+}
+
+.moves-button {
+  @apply py-2 px-4 rounded;
+}
+
+.moves-mute-button {
+  @apply text-white font-bold;
+}
+
+.moves-unmute-bg {
+  @apply bg-green-500 hover:bg-green-600;
+}
+
+.moves-mute-bg {
+  @apply bg-red-500 hover:bg-red-600;
+}
+
+.moves-button[disabled] {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+
+
+/* custom-tailwind.css */
+.custom-button {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.custom-button:hover {
+  background-color: #333; /* Darken the background color on hover */
+}
+
+/* Red button style */
+.red-button {
+  background-color: #f44336; /* Red color */
+}
+
+.red-button:hover {
+  background-color: #d32f2f; /* Darken the red color on hover */
+}
+
+/* Green button style */
+.green-button {
+  background-color: #317b34; /* Green color */
+}
+
+.green-button:hover {
+  background-color: #388e3c; /* Darken the green color on hover */
+}
+
+.center-text {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100%; /* Ensure it takes the full height of its container */
+  text-align: center; /* Center text within the container */
+  padding: 0.5rem 1rem;
+  padding-top: 0%;
+  padding-bottom: 3.5%;
+  font-weight: bold;
+  font-size: 36px;
+  
+}
+
+.set-timer-duration-text {
+  @apply text-2xl font-bold mb-4 pt-4;
+  color: rgb(20,20,20);
+}
+
+
+/* Apply modern styles to the input arrows */
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0; /* Remove the default margin */
+}
+
+/* Style the input arrows */
+.input::after {
+  content: '\25B2'; /* Unicode character for an upward arrow */
+  position: absolute;
+  top: 8px; /* Adjust the vertical position */
+  right: 10px; /* Adjust the horizontal position */
+  font-size: 12px; /* Adjust the arrow size */
+  color: #0f0; /* Arrow color */
+  pointer-events: none; /* Prevent interaction with the arrow */
+}
+
+/* Style the input arrows for down direction */
+.input::-webkit-outer-spin-button::-webkit-down-button,
+.input::-webkit-inner-spin-button::-webkit-down-button {
+  display: none; /* Hide the default down arrow */
+}
+
+/* Apply styles to the input field itself */
+.input {
+  @apply text-2xl font-bold mb-4 pt-4 text-center;
+  /* Remove blinking cursor */
+  caret-color: transparent;
+  /* Style the input like a digital clock */
+  font-family: monospace; /* Use a monospace font for uniform character widths */
+  background-color: #f5f0f0; /* Black background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  color: rgb(20, 20, 20); /* Green text color */
+  border: 2px solid black; /* Add a black border */
+  padding: 0.2rem 0.5rem; /* Adjust padding for better appearance */
+  border-radius: 0.5rem; /* Add a slight border radius */
+  width: 4rem; /* Adjust the width as needed */
+  /* Ensure the arrows are visible on hover */
+  &:hover::after {
+    color: #00f; /* Change arrow color on hover */
+  }
+
+  .input::before {
+  content: 'Minutes';
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: rgba(20, 20, 20, 0.5); /* Placeholder text color */
+}
+
+/* Style the seconds input and placeholder */
+.input + .input::before {
+  content: 'Seconds';
+  left: auto;
+  right: 10px;
+}
+
+}
+
+.minutes-indicator {
+  @apply text-sm font-bold mb-1 pt-4 !important; /* Add !important to ensure the style takes precedence */
+}
+
+.timer-button,
+.moves-button,
+.custom-button {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem; /* Increase border-radius for oval shape */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.timer-button:hover,
+.moves-button:hover,
+.custom-button:hover {
+  background-color: #333; /* Darken the background color on hover */
+}
+
+.timer-text-lg {
+  font-size: 4rem; /* Adjust the font size as needed */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-shadow: 0 1px 1px rgba(81, 79, 79, 0.5);
+}
