@@ -5,8 +5,8 @@
 body {
   background: linear-gradient(
     135deg,
-    rgba(0, 0, 0, 1),    /* Black */
-    rgba(1, 94, 1, 0.757)   /* Green */
+  rgba(128, 128, 128, 0.8), /* Gray */
+  rgba(255, 0, 0, 0.8) /* Red */
   );
   display: flex;
   flex-direction: column;
@@ -18,20 +18,24 @@ body {
 
 /* Add your "Shadow Wrestler" text styles */
 .shadow-wrestler-text {
-  color: white;
-  font-size: 36px; /* Adjust font size as needed */
-  font-weight: bold;
-  margin-bottom: 20px; /* Add spacing below the text */
+  font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif; /* Replace with your chosen font family */
+  font-size: 40px; /* Adjust font size as needed */
+  font-weight: bold; /* Adjust font weight as needed */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust shadow values for effect */
+  letter-spacing: 2px; /* Adjust letter spacing as needed */
+  line-height: 1.2; /* Adjust line height as needed */
+  color: white; /* Adjust text color as needed */
+  white-space: nowrap; /* Keep the text on one line */
 }
-
 
 /* custom-tailwind.css */
 .container {
   @apply mx-auto p-4 max-w-md rounded-lg shadow-md;
   background: linear-gradient(
       135deg,
-      rgba(243, 6, 69, 0.931),    /* Red or Orange Shade */
-      rgba(215, 211, 211, 0.558)   /* Green */
+     rgba(0, 128, 255, 0.8), /* Light Blue */
+  rgba(128, 0, 128, 0.8) /* Purple */
+      
     );  
   position: absolute;
   top: 50%;
@@ -78,6 +82,7 @@ body {
 
 .moves-text {
   @apply text-3xl font-bold mb-4;
+  color: #f43636
 }
 
 .moves-button {
@@ -151,6 +156,7 @@ body {
 
 .set-timer-duration-text {
   @apply text-2xl font-bold mb-4 pt-4;
+  color: rgb(20,20,20);
 }
 
 
@@ -217,4 +223,22 @@ body {
 
 .minutes-indicator {
   @apply text-sm font-bold mb-1 pt-4 !important; /* Add !important to ensure the style takes precedence */
+}
+
+.timer-button,
+.moves-button,
+.custom-button {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem; /* Increase border-radius for oval shape */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.timer-button:hover,
+.moves-button:hover,
+.custom-button:hover {
+  background-color: #333; /* Darken the background color on hover */
 }

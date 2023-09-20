@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './custom-tailwind.css'; // Import your custom CSS file
 
-const moves = ['shoot', 'sprawl', 'block'];
+const moves = ['SHOOT', 'SPRAWL', 'BLOCK'];
 
 function Moves() {
   const [currentMove, setCurrentMove] = useState('');
