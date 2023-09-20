@@ -34,20 +34,17 @@ function Moves() {
   }, [speed, isMuted]);
 
   return (
-    <div className="bg-blue-200 p-4 rounded-lg shadow-md text-center">
-      <h2 className="text-2xl font-semibold mb-2">Current Move:</h2>
-      <p className="text-3xl font-bold mb-4">{currentMove}</p>
+    <div className="moves-container">
+      <h2 className="moves-heading">Current Move:</h2>
+      <p className="moves-text">{currentMove}</p>
       <button
-      onClick={() => setIsMuted(!isMuted)}
-      className={`custom-button ${
-        isMuted
-          ? 'red-button'
-          : 'green-button'
-      }`}
-    >
-  {isMuted ? 'Unmute' : 'Mute'}
-</button>
-
+        onClick={() => setIsMuted(!isMuted)}
+        className={`moves-button ${
+          isMuted ? 'moves-mute-button moves-mute-bg' : 'moves-mute-button moves-unmute-bg'
+        }`}
+      >
+        {isMuted ? 'Unmute' : 'Mute'}
+      </button>
     </div>
   );
 }
