@@ -255,3 +255,13 @@ body {
   padding-bottom: 1rem;
   text-shadow: 0 1px 1px rgba(81, 79, 79, 0.5);
 }
+
+.on-button {
+  background-color: black; /* Green background when enabled */
+  color: white;
+}
+
+.off-button {
+  background-color: gray; /* Red background when disabled */
+  color: white;
+}
