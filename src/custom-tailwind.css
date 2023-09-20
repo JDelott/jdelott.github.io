@@ -26,6 +26,7 @@ body {
   line-height: 1.2; /* Adjust line height as needed */
   color: white; /* Adjust text color as needed */
   white-space: nowrap; /* Keep the text on one line */
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* custom-tailwind.css */
@@ -41,10 +42,12 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .timer-container {
   @apply bg-gray-200 p-4 rounded-lg shadow-md text-center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .timer-heading {
@@ -74,10 +77,12 @@ body {
 .moves-container {
   @apply bg-blue-200 p-4 rounded-lg shadow-md text-center;
   margin-top: 20px; /* Add top margin to create space between the containers */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .moves-heading {
-  @apply text-2xl font-semibold mb-2;
+  font-weight: bold; /* Make the text bold */
+  @apply text-2xl mb-2;
 }
 
 .moves-text {
@@ -193,10 +198,11 @@ body {
   /* Style the input like a digital clock */
   font-family: monospace; /* Use a monospace font for uniform character widths */
   background-color: #f5f0f0; /* Black background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   color: rgb(20, 20, 20); /* Green text color */
   border: 2px solid black; /* Add a black border */
   padding: 0.2rem 0.5rem; /* Adjust padding for better appearance */
-  border-radius: 0.2rem; /* Add a slight border radius */
+  border-radius: 0.5rem; /* Add a slight border radius */
   width: 4rem; /* Adjust the width as needed */
   /* Ensure the arrows are visible on hover */
   &:hover::after {
@@ -233,7 +239,7 @@ body {
   font-weight: bold;
   padding: 0.5rem 1rem;
   border-radius: 2rem; /* Increase border-radius for oval shape */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   transition: background-color 0.3s ease-in-out;
 }
 
