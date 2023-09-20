@@ -196,4 +196,25 @@ body {
   &:hover::after {
     color: #00f; /* Change arrow color on hover */
   }
+
+  .input::before {
+  content: 'Minutes';
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: rgba(20, 20, 20, 0.5); /* Placeholder text color */
+}
+
+/* Style the seconds input and placeholder */
+.input + .input::before {
+  content: 'Seconds';
+  left: auto;
+  right: 10px;
+}
+
+}
+
+.minutes-indicator {
+  @apply text-sm font-bold mb-1 pt-4 !important; /* Add !important to ensure the style takes precedence */
 }
