@@ -1,7 +1,7 @@
 {
   "name": "shadow-wrestler",
   "version": "0.1.0",
-  "homepage": "https://jdelott.github.io/shadow-wrestler",
+  "homepage": "https://jdelott.github.io",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

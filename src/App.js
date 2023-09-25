@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import Timer from './Timer';
 import Moves from './Moves';
-import './styles.css';
 import { isSpeechSynthesisSupported } from './speechUtils';
 import './custom-tailwind.css';
 import Title from './Title';
